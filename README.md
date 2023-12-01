@@ -24,4 +24,4 @@ O:/Path/To/WAV!/File/Here/without/any/quotes
 
 - The '_-_' acts just as , in CSV files
 
-There is no editor as per V1 but yeah :/ its all manual for now
+There is no editor as per V0.0.1 but yeah :/ its all manual for now
