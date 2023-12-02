@@ -36,7 +36,8 @@
             // 
             KeytoPressLB.AutoSize = true;
             KeytoPressLB.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            KeytoPressLB.Location = new Point(298, 206);
+            KeytoPressLB.ForeColor = SystemColors.ControlLight;
+            KeytoPressLB.Location = new Point(257, 214);
             KeytoPressLB.Name = "KeytoPressLB";
             KeytoPressLB.Size = new Size(232, 54);
             KeytoPressLB.TabIndex = 0;
@@ -46,6 +47,7 @@
             // 
             pointsLB.AutoSize = true;
             pointsLB.Font = new Font("Segoe UI Black", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            pointsLB.ForeColor = Color.White;
             pointsLB.Location = new Point(339, 37);
             pointsLB.Name = "pointsLB";
             pointsLB.Size = new Size(39, 45);
@@ -56,6 +58,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Navy;
             ClientSize = new Size(800, 450);
             Controls.Add(pointsLB);
             Controls.Add(KeytoPressLB);

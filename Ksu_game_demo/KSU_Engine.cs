@@ -39,6 +39,7 @@ namespace Ksu_game_demo
             string[] lines = File.ReadAllLines(fileLoc)[1..];
             foreach (string line in lines)
             {
+                
                 string timing = line.Split("-")[0];
                 string key = line.Split("-")[1];
                 Thread.Sleep(Convert.ToInt32(Math.Round(Convert.ToDouble(timing) * 1000)));
@@ -78,12 +79,18 @@ namespace Ksu_game_demo
             if (KeytoPressLB.Text.Length > 0 && pressedKey == KeytoPressLB.Text[0])
             {
                 Action action = () => { pointsLB.Text = $"{Convert.ToInt32(pointsLB.Text) + 5}"; };
+                Action action2 = async () => { KeytoPressLB.ForeColor = Color.Green; await Task.Delay(100); KeytoPressLB.ForeColor = Color.White; };
                 Invoke(action);
+                Task t = new Task(() => { Invoke(action2); });
+                t.Start();
             }
             else
             {
-                Action action = () => { pointsLB.Text = $"{Convert.ToInt32(pointsLB.Text) - 2}"; };
+                Action action = () => { pointsLB.Text = $"{Convert.ToInt32(pointsLB.Text) - 2}";};
+                Action action2 = async () => { KeytoPressLB.ForeColor = Color.Red; await Task.Delay(100); KeytoPressLB.ForeColor = Color.White; };
                 Invoke(action);
+                Task t = new Task(() => { Invoke(action2); });
+                t.Start();
             }
         }
 
